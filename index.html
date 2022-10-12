@@ -22,7 +22,7 @@
 let sequence = []
 let record = localStorage.getItem('memoryMaxLevel')??0;
 document.getElementById("level").innerHTML = `Level: ${sequence.length}`
-//document.getElementById("record").innerHTML = `Record: ${record}`
+document.getElementById("record").innerHTML = `Record: ${record}`
 async function start(){
     createSequence()
     counter = 0;
