@@ -8,7 +8,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
     </head>
-    <body id="body">        
+    <body id="body">
+        <div id="level"style="top:10%">Level: 0</div>
+        <div id="record" style="top:5%">Record: 0</div>
         <div class="container">
           <div id="red" onclick="red()"></div>
           <div id="blue" onclick="blue()"></div>
@@ -17,9 +19,9 @@
           <div class="center" onclick="start()"></div>
         </div>
         <script async defer>
-let level = 1;
-let counter = 0;
 let sequence = []
+let record = localStorage.getItem('memoryMaxLevel')??0;
+document.getElementById("level").innerHTML = `Level: ${sequence.length}`
 async function start(){
     createSequence()
     counter = 0;
@@ -31,8 +33,13 @@ async function start(){
         await new Promise(r => setTimeout(r, 300));
     }
 }
-async function win(){   
-    level++
+async function win(){
+    document.getElementById("level").innerHTML = `Level: ${sequence.length}`
+    if(sequence.length > record){
+      localStorage.setItem('memoryMaxLevel', sequence.length);
+      record = sequence.length
+      document.getElementById("record").innerHTML = `Record: ${record}`
+    }
     playWin()    
     document.getElementById("body").style.background = "#aaa"
     await new Promise(r => setTimeout(r, 200));
@@ -50,6 +57,7 @@ async function win(){
 }
 async function lose(){
     sequence = []
+    document.getElementById("level").innerHTML = `Level: ${sequence.length}`
     playLose()
     document.getElementById("body").style.background = "#000"
     await new Promise(r => setTimeout(r, 200));
@@ -251,7 +259,11 @@ button{
     border-radius: 0 0 100% 0;
     opacity:0.7;
   }
-
+  #record,#level{
+    color:#ddd;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
 
         </style>
     </body>
