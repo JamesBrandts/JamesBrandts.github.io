@@ -7,7 +7,7 @@ body{
 }
 #main{
   position:absolute;
-  top:20%;
+  top:30%;
   display:grid;
   grid-template-columns: auto auto auto auto auto auto auto;
   margin:0;
@@ -29,7 +29,7 @@ div{
 }
 #cover-container{
   position:absolute;
-  top:20%;
+  top:30%;
   display:grid;
   grid-template-columns: auto auto auto auto auto auto auto;
   margin:0;
