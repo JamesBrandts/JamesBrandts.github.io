@@ -1,0 +1,63 @@
+body{
+    margin:0;
+    background:#022;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  #container{
+    position:absolute;
+    display:flex;
+    background:#000;
+    box-sizing: content-box;
+    width:85vw;
+    height: 52vh;
+    border-radius:1.5vw;
+    bottom:2vh;
+    left:7.5vw;
+  }
+  .tecla{
+    width:5vw;
+    height:50vh;;
+    background: #fff;
+    color:#222;
+    font-weight:bold;
+    font-size:25px;
+    text-align: center;
+    line-height: 90vh;
+    margin:1vh 0 1vh 1vw;
+    border-radius:1vw;
+  }
+  .teclaB{
+    position:absolute;
+    width:4vw;
+    height:25vh;;
+    background: #000;
+  }
+  #As{
+      left:4.5vw;
+  }
+  #Cs{
+    left:16.5vw;
+}
+#Ds{
+    left:22.5vw;
+}
+#Fs{
+    left:34.5vw;
+}
+#Gs{
+    left:40.5vw;
+}
+#as{
+    left:46.5vw;
+}
+#cs{
+    left:58.5vw;
+}
+#ds{
+    left:64.5vw;
+}
+#fs{
+    left:76.5vw;
+}
