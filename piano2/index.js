@@ -13,6 +13,10 @@ async function jingle(){
     music("eee eee egcde fff ffee eeeddedg eee eee egcde fff ffee eeggfdc  GedcG GGGedca afedb ggfde GedcG Gedca aafedggg gagfdcg")
 }
 
+async function spider(){
+    music("GCCCDEEEDCDEC EEFGGFEFGE CCDEEDCDEC GGCCCDEEEDCDEC")
+}
+
 async function music(notes){
     let arr = notes.split('')
     let arr2 = []
