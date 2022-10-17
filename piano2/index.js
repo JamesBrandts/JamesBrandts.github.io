@@ -17,6 +17,10 @@ async function spider(){
     music("GCCCDEEEDCDEC EEFGGFEFGE CCDEEDCDEC GGCCCDEEEDCDEC")
 }
 
+async function shark(){
+    music("DDsDDsDDsDDsG D E G D G D D E D EGGGGGGG DEGGGGGGG DEGGGGGGG GGFs")
+}
+
 async function music(notes){
     let arr = notes.split('')
     let arr2 = []
