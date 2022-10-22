@@ -11,8 +11,8 @@ button{
     font-weight:bold;
     font-size:2vw;
     text-align: center;
-    margin:10vh 4vw;
-    border:solid 1vh #088;
+    margin:10vh auto auto 4vw;
+    border:solid 0.5vw #088;
     height: 15vh;
     width: 10vw;
 }
